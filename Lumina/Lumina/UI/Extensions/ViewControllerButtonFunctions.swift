@@ -11,6 +11,8 @@ import Foundation
 extension LuminaViewController {
     @objc func cancelButtonTapped() {
         Log.verbose("cancel button tapped")
+        //add dismiss view controller for cancel button tapped
+        self.dismiss(animated: true, completion: nil)
         delegate?.dismissed(controller: self)
     }
 
