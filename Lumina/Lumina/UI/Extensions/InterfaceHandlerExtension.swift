@@ -57,7 +57,11 @@ extension LuminaViewController {
     }
 
     func updateButtonFrames() {
-        self.cancelButton.center = CGPoint(x: self.view.frame.minX + 55, y: self.view.frame.maxY - 45)
+//        self.cancelButton.center = CGPoint(x: self.view.frame.minX + 55, y: self.view.frame.maxY - 45)
+        //cancel button needs the value that the torch button has
+        self.cancelButton.center = CGPoint(x: self.view.frame.minX + 25, y: self.view.frame.minY + 25)
+        
+        
         var minY = self.view.frame.minY
         if self.view.frame.width > self.view.frame.height {
             var maxX = self.view.frame.maxX
@@ -73,8 +77,12 @@ extension LuminaViewController {
             }
             self.shutterButton.center = CGPoint(x: self.view.frame.midX, y: maxY - 45)
         }
-        self.switchButton.center = CGPoint(x: self.view.frame.maxX - 25, y: self.view.frame.minY + 25)
-        self.torchButton.center = CGPoint(x: self.view.frame.minX + 25, y: self.view.frame.minY + 25)
+//        self.switchButton.center = CGPoint(x: self.view.frame.maxX - 25, y: self.view.frame.minY + 25)
+        //switch button needs to move in from the right edge and be lower
+        self.switchButton.center = CGPoint(x: self.view.frame.maxX - 35, y: self.view.frame.minY + 35)
+//        self.torchButton.center = CGPoint(x: self.view.frame.minX + 25, y: self.view.frame.minY + 25)
+        //torch button has to move over to the right and be lower
+        self.torchButton.center = CGPoint(x: self.view.frame.maxX - 65, y: self.view.frame.minY + 35)
         /// Use more width, if text has been moved down below the buttons (e.g. notch on iPhone X):
         let textWidth = self.view.frame.maxX - (minY > 35 ? 20 : 110)
         self.textPromptView.frame.size = CGSize(width: textWidth, height: 80)

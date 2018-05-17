@@ -74,25 +74,25 @@ final class LuminaButton: UIButton {
         switch systemStyle {
         case .torch:
             self.image = UIImage(named: "cameraTorchOff", in: Bundle(for: LuminaViewController.self), compatibleWith: nil)
-//            self.frame = CGRect(origin: CGPoint(x: 10, y: 10), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
+            self.frame = CGRect(origin: CGPoint(x: 10, y: 10), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
             //torch takes the original parameters from camera switch and adds more psace from the x main bounds
             //double current value from 60 to 120
-            self.frame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.maxX - 120, y: 20), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
+//            self.frame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.maxX - 120, y: 20), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
             addButtonShadowEffects()
         case .cameraSwitch:
             self.image = UIImage(named: "cameraSwitch", in: Bundle(for: LuminaViewController.self), compatibleWith: nil)
-//            self.frame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.maxX - 50, y: 10), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
+            self.frame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.maxX - 50, y: 10), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
             //camera switch is moved down by twenty points
             //add ten point to space from right margin
-            self.frame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.maxX - 60, y: 20), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
+//            self.frame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.maxX - 60, y: 20), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
             addButtonShadowEffects()
         case .cancel:
             self.text = "X"
-//            self.frame = CGRect(origin: CGPoint(x: 10, y: UIScreen.main.bounds.maxY - 50), size: CGSize(width: self.cancelButtonWidth, height: self.cancelButtonHeight))
+            self.frame = CGRect(origin: CGPoint(x: 10, y: UIScreen.main.bounds.maxY - 50), size: CGSize(width: self.cancelButtonWidth, height: self.cancelButtonHeight))
             //cancel gets the torch frame
             //moved down by ten points
             //y value is changed from 10 to 20
-            self.frame = CGRect(origin: CGPoint(x: 10, y: 20), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
+//            self.frame = CGRect(origin: CGPoint(x: 10, y: 20), size: CGSize(width: self.squareSystemButtonWidth, height: self.squareSystemButtonHeight))
             self.titleLabel?.font = UIFont.systemFont(ofSize: 40, weight: .light)
             self.titleLabel?.layer.shadowOffset = CGSize(width: 0, height: 0)
             self.titleLabel?.layer.shadowOpacity = 1
